@@ -1,0 +1,825 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- FONTES --- */
+@font-face {
+  font-family: 'FuturaLT-Light';
+  src: url(fonte/FuturaLT-Light.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaLT-Book';
+  src: url(fonte/FuturaLT-Book.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --- BODY --- */
+body {
+  background-color: transparent;
+  font-family: sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* --- CABEÇALHO --- */
+.cabecalho {
+  background-color: rgb(78, 111, 126);     /*RGB      claro(177, 203, 218)      normal rgb(78, 111, 126) */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  padding: 0 20px;
+  opacity: 0.8;
+  z-index: 20;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* --- LOGO --- */
+.logo {
+  position: relative;
+  /* Não fixed para evitar problemas no mobile */
+  max-width: 210px;
+  width: 250px;
+  height: auto;
+  padding: 10px 0;
+  margin: 0 auto;
+  left: 10%;
+
+}
+
+/* --- MENU --- */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.botao {
+  position: relative;
+  /* Não fixed para não travar layout */
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  z-index: 20;
+  flex-wrap: wrap;
+  font-family: 'FuturaLT-Light', sans-serif;
+}
+
+.botao li button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+
+.botao li button:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* --- REDES SOCIAIS --- */
+.redes-sociais {
+  position: fixed;
+  /* fixa no lado da tela */
+  top: 30px;
+  /* distância do topo, ajuste se precisar */
+  left: 20px;
+  /* distância da esquerda */
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+  z-index: 100;
+  /* garante que fique acima de outros elementos */
+}
+
+.redes-sociais img {
+  width: 23px;
+  height: auto;
+  margin: 0;
+  /* sem margem extra, espaçamento controlado pelo gap */
+}
+
+
+/* --- VIDEO DE FUNDO --- */
+.video video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* --- FRASE MASAO --- */
+.frase-masao {
+  position: relative;
+  top: 100px;
+  left: 70%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: right;
+  width: 600px;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+  z-index: 19;
+
+}
+
+.frase-masao h2 {
+  font-size: 22px;
+  color: white;
+  font-family: 'FuturaLT-Book', sans-serif;
+  text-align: right;
+
+}
+
+.frase-masao h1 {
+  font-size: 50px;
+  text-align: right;
+}
+
+.frase-masao img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+/* --- SETA --- */
+.seta {
+  display: flex;
+  position: relative;
+  top: 230px;
+  left: 70%;
+  transform: translateX(-50%);
+  height: 300px;
+  z-index: 19;
+}
+
+/* --- DIV FUNDO-INFERIOR --- */
+.fundo-inferior {
+  background-color: rgb(28, 40, 51);    /*RGB azul escuro(1, 34, 53)  meio sinza(28, 40, 51)   cor clara rgb(58, 85, 97)     */
+  padding: 100px 20px;
+  margin-top: 350px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+/* --- DIV MINIATURA --- */
+.miniatura {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  position: relative;
+  top: 10%;
+  left: 0;
+  transform: none;
+}
+
+.miniatura ul {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.miniatura li {
+  font-size: 100px;
+
+}
+
+.miniatura img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+/* --- DIV SOBRE NÓS --- */
+.sobre ul {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 130px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.sobre li {
+  list-style: none;
+}
+
+.img-quem-somos {
+  width: 600px;
+  height: auto;
+  display: block;
+}
+
+.conteudo {
+  max-width: 600px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.quem-somos {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: white;
+}
+
+.texto {
+  margin: 0;
+}
+
+/* --- TITULOS E PARÁGRAFOS GERAIS --- */
+
+
+h1 {
+  font-size: 30px;
+  color: white;
+  font-family: 'FuturaLT-Light', sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: 'FuturaLT-Light', sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* --- DIV CERTIFICADOS --- */
+.certificados-lista {
+  position: relative;
+  top: 0px;
+  gap: 200px;
+  padding: 60px 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.certificados {
+  position: relative;
+}
+
+.texto-certificado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* --- DIV CONCEITO --- */
+.conceito {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 115px 20px;
+  color: white;
+  flex-wrap: wrap;
+
+}
+
+.bloco-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.bloco-textos h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.imagem img {
+  width: 100%;
+  margin-top: 0px;
+  max-width: 550px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+/* --- DIV RODAPÉ --- */
+.novo-rodape {
+  background: #f7f7f70a;
+  color: #222;
+  padding: 40px 0 0 0;
+  border-top: 2px solid #e0e0e000;
+  font-family: Arial, sans-serif;
+}
+
+.novo-container-rodape {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.nova-coluna {
+  flex: 1 1 260px;
+  min-width: 220px;
+  margin-bottom: 24px;
+}
+
+.contato-lista {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contato-lista li {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  padding: 0 8px 0 0;
+}
+
+.novo-copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #666;
+  border-top: 1px solid #ffffff;
+  padding: 16px 0 10px 0;
+  background: rgb(58, 85, 97);
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 800px) {
+  .logo {
+    width: 180px;
+    position: relative;
+    /* garante fluxo natural no mobile */
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .botao {
+    position: relative;
+    /* remove fixed */
+    top: auto;
+    right: auto;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto 0 auto;
+  }
+
+  .frase-masao {
+    width: 90%;
+    left: 50%;
+    font-size: 20px;
+    top: 90px;
+    transform: translateX(-50%);
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .frase-masao h1 {
+    font-size: 30px;
+  }
+
+  .frase-masao h2 {
+    max-width: 100%;
+    /* corrige largura no mobile */
+  }
+
+  .seta {
+    top: 200px;
+    height: auto;
+    max-width: 60px;
+  }
+
+  .conceito {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .imagem img {
+    max-width: 100%;
+  }
+
+  .sobre ul {
+    padding: 60px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .miniatura ul {
+    gap: 30px;
+  }
+
+
+}
+
+/*Fundo da pagina PRODUTOS*/
+
+.fundo {
+  background-color: rgb(58, 85, 97);
+}
+
+.titulo {
+  text-align: center;
+}
+
+.titulo h1 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
+.produtos li {
+  margin-top: 10px;
+  display: inline-block;
+  margin-bottom: 100px;
+  list-style: none;
+  max-width: 100%;
+  width: 380px;
+  height: 200px;
+
+}
+
+.produtos img {
+
+   width: 100%;
+   height: auto;
+
+
+}
+
+.produtos h1 {
+  font-size: 30px;
+
+}
+
+.produtos .produto-correia h1 {
+  text-align: left;
+}
+
+.produtos .produto-poke h1 {
+  text-align: right;
+}
+
+.produtos .produto-bobina h1 {
+  text-align: right;
+}
+
+.produtos .produto-escova h1 {
+  text-align: left;
+}
+
+
+
+.formulario {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formulario h2 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #0e1f2e;
+}
+
+.formulario form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #0e1f2e;
+}
+
+.formulario form input,
+.formulario form textarea {
+  width: 100%;
+  border: 1px solid #0e1f2e;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  resize: none;
+  font-family: Arial, sans-serif;
+}
+
+.formulario form button {
+  background-color: #0e1f2e;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  float: right;
+  font-family: Arial, sans-serif;
+}
+
+.rodape {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  color: #000000;
+}
+
+.rodape h3 {
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+.rodape p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #000000;
+  text-align: center;
+}
+
+.rodape a {
+  text-decoration: none;
+  color: #0e1f2e;
+}
+
+.fundo-orcamento {
+  background-color: rgb(255, 255, 255);
+}
+
+.whatsapp img {
+  position: relative;
+  width: 100%;
+  max-width: 40px;
+
+
+
+
+}
+
+.rodape-inicio {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.rodape-inicio h3 {
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+.rodape-inicio p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.rodape-inicio a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 1s ease forwards;
+  animation-delay: 0.5s;
+  /* atraso para o efeito começar */
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- MENU HAMBURGUER --- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #fff;
+  position: absolute;
+  right: 25px;
+  top: 18px;
+  z-index: 200;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .cabecalho {
+    flex-direction: row;
+    height: auto;
+    padding: 10px 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background: rgb(78, 111, 126);
+    width: 100vw;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    z-index: 150;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .botao {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .redes-sociais {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+  }
+
+  .frase-masao {
+    width: 95vw;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 18px;
+  }
+
+  .frase-masao h1 {
+    font-size: 28px;
+  }
+ 
+
+  .seta {
+    top: 180px;
+    left: 50%;
+    max-width: 40px;
+    height: auto;
+    transform: translateX(-50%);
+  }
+
+  .miniatura ul {
+    gap: 15px;
+  }
+
+  .miniatura img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sobre ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+    gap: 20px;
+  }
+
+  .img-quem-somos {
+    width: 90vw;
+    max-width: 350px;
+  }
+
+  .conceito {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 10px;
+  }
+
+  .bloco-textos {
+    max-width: 100vw;
+    font-size: 15px;
+  }
+
+  .imagem img {
+    max-width: 90vw;
+  }
+
+  .certificados-lista {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .fundo-inferior {
+    padding: 60px 5px;
+    margin-top: 220px;
+  }
+
+  .formulario {
+    padding: 20px 5px;
+    max-width: 98vw;
+  }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 500px) {
+  .logo {
+    width: 120px;
+    padding: 5px 0;
+  }
+
+  .frase-masao {
+    font-size: 14px;
+    width: 98vw;
+    padding: 5px;
+  }
+  .frase-masao .frase img{
+    width: 100px;
+  }
+
+  .frase-masao h1 {
+    font-size: 18px;
+  }
+
+  .miniatura img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .img-quem-somos {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 900px) {
+  /* ...existing code... */
+
+  .redes-sociais {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 0;
+    gap: 15px;
+    z-index: 200;
+  }
+}
