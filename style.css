@@ -187,7 +187,7 @@ body {
   /*RGB azul escuro(1, 34, 53)  meio sinza(28, 40, 51)   cor clara rgb(58, 85, 97)     */
   padding: 100px 20px;
   margin-top: 350px;
-  height: auto;
+  height: 127vw;
   position: relative;
   z-index: 2;
   color: white;
@@ -285,8 +285,8 @@ p {
 .certificados-lista {
   position: relative;
   top: 0px;
-  gap: 200px;
-  padding: 60px 30px;
+  gap: 70px;
+  padding: 10px 10px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -304,6 +304,7 @@ p {
   align-items: center;
   text-align: center;
   font-size: 24px;
+  
 }
 
 /* --- DIV CONCEITO --- */
@@ -311,13 +312,12 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 115px 20px;
+  padding: 215px 20px;
   color: white;
   flex-wrap: wrap;
-
 }
 
 .bloco-textos {
@@ -342,6 +342,7 @@ p {
   max-width: 550px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
   display: block;
+  
 }
 
 /* --- DIV RODAPÉ --- */
@@ -631,6 +632,17 @@ p {
   text-decoration: none;
   color: #ffffff;
 }
+.copy-produtos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #666;
+  border-top: 1px solid #000000;
+  padding: 16px 0 10px 0;
+}
 
 img {
   opacity: 0;
@@ -683,11 +695,10 @@ img {
     z-index: 150;
   }
 
-  .menu.active {
+   .menu.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
   }
 
   .botao {
@@ -695,30 +706,47 @@ img {
     gap: 10px;
     width: 100%;
     align-items: center;
+    padding: 10px 0;
   }
 
   .redes-sociais {
     position: static;
-    flex-direction: row;
     justify-content: center;
     margin-top: 10px;
     gap: 20px;
   }
 
+  .menu-toggle {
+    display: block;
+  }
+
   .frase-masao {
-    width: 95vw;
+    width: 90vw;
     left: 50%;
     top: 80px;
     transform: translateX(-50%);
     padding: 10px;
     margin: 10px auto;
     font-size: 18px;
+    text-align: center;
   }
 
   .frase-masao h1 {
     font-size: 28px;
+    text-align: center;
+  }
+  
+  .frase-masao h2 {
+    text-align: center;
   }
 
+  .seta {
+    top: 180px;
+    left: 50%;
+    max-width: 40px;
+    height: auto;
+    transform: translateX(-50%);
+  }
 
   .seta {
     top: 180px;
@@ -773,6 +801,7 @@ img {
   .fundo-inferior {
     padding: 60px 5px;
     margin-top: 220px;
+    height: auto;
   }
 
   .formulario {
