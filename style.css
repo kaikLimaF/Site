@@ -56,7 +56,7 @@ body {
   height: auto;
   padding: 10px 0;
   margin: 0 auto;
-  left: 10%;
+  left: 15%;
 
 }
 
@@ -282,6 +282,10 @@ h1 {
   color: white;
   font-family: 'FuturaLT-Light', sans-serif;
   text-align: center;
+}
+
+h3{
+  font-family: 'FuturaLT-Light';
 }
 
 p {
