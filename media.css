@@ -1,0 +1,249 @@
+@media (max-width: 900px) {
+  /* --- GERAL --- */
+  body {
+    padding: 0 0px; /* Adiciona um respiro nas laterais */
+  }
+
+  /* --- CABEÇALHO E MENU --- */
+  .cabecalho {
+    flex-direction: row;
+    height: auto;
+    padding: 10px 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .video video{
+  filter: brightness(80%);
+  }
+
+  .seta {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background: rgb(78, 111, 126);
+    width: 100vw;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    z-index: 150;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botao {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .redes-sociais {
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 0;
+    gap: 15px;
+    z-index: 200;
+  }
+
+  /* --- CONTEÚDO PRINCIPAL --- */
+  .frase-masao {
+    position: relative; /* Cria um contexto de posicionamento */
+    width: 90vw;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+    padding: 10px;
+    margin: 10px auto;
+    padding-left: 65px; /* Abre espaço para o ícone à esquerda */
+  }
+
+  .frase-masao h1 img {
+    position: absolute; /* Solta a imagem do fluxo do texto */
+    left: 10px; /* Posiciona a imagem no espaço criado */
+    top: 80%; /* Centraliza a imagem verticalmente */
+    transform: translateY(-50%);
+    width: 45px; /* Define um tamanho fixo para o ícone */
+    height: auto;
+  }
+
+  .frase-masao h1,
+  .frase-masao h2 {
+    text-align: left; /* Alinha todo o texto à esquerda */
+  }
+
+  .frase-masao h1 {
+    font-size: 28px;
+  }
+
+  .frase-masao h2 {
+    font-size: 16px;
+  }
+
+  .seta {
+    top: 180px;
+    left: 50%;
+    max-width: 40px;
+    height: auto;
+    transform: translateX(-50%);
+  }
+
+  .miniatura ul {
+    gap: 15px;
+  }
+
+  .miniatura img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sobre ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+    gap: 20px;
+  }
+
+  .img-quem-somos {
+    width: 90vw;
+    max-width: 350px;
+  }
+
+  .conceito {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 15px;
+  }
+
+  .bloco-textos {
+    max-width: 100vw;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .bloco-textos h1 {
+    text-align: center;
+  }
+
+  .imagem img {
+    max-width: 90vw;
+  }
+
+  .certificados-lista {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .fundo-inferior {
+    padding: 60px 15px;
+    margin-top: 220px;
+    height: auto;
+  }
+
+  .formulario {
+    padding: 20px 10px;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 740px) {
+  .logo {
+    width: 180px;
+    position: relative;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+  
+
+  .botao {
+    position: relative;
+    top: auto;
+    right: auto;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto 0 auto;
+  }
+
+  .frase-masao {
+    width: 90%;
+    top: 90px;
+  }
+
+  .frase-masao h1 {
+    font-size: 30px;
+  }
+
+  .seta {
+    display: none;
+    top: 200px;
+    max-width: 60px;
+  }
+
+  .conceito {
+    gap: 40px;
+  }
+
+  .imagem img {
+    max-width: 100%;
+  }
+
+  .sobre ul {
+    padding: 60px 20px;
+  }
+
+  .miniatura ul {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 150px;
+    padding: 5px 0;
+  }
+
+  .frase-masao {
+    width: 95vw;
+    padding: 5px;
+  }
+
+  .frase-masao .icone-ideia {
+    width: 40px; /* Ícone um pouco menor */
+  }
+
+  .frase-masao h1 {
+    font-size: 22px;
+  }
+
+  .frase-masao h2 {
+    font-size: 14px;
+  }
+
+  .miniatura img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .img-quem-somos {
+    max-width: 95vw;
+  }
+  .seta {
+    display: none;
+  }
+}
