@@ -725,14 +725,14 @@ img {
   }
 
   .redes-sociais {
-    position: static;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 20px;
-  }
-
-  .menu-toggle {
-    display: block;
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 0;
+    gap: 15px;
+    z-index: 200;
   }
 
   .frase-masao {
@@ -753,14 +753,6 @@ img {
   
   .frase-masao h2 {
     text-align: center;
-  }
-
-  .seta {
-    top: 180px;
-    left: 50%;
-    max-width: 40px;
-    height: auto;
-    transform: translateX(-50%);
   }
 
   .seta {
@@ -853,20 +845,5 @@ img {
 
   .img-quem-somos {
     max-width: 98vw;
-  }
-}
-
-@media (max-width: 900px) {
-  /* ...existing code... */
-
-  .redes-sociais {
-    position: absolute;
-    left: 10px;
-    top: 18px;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 0;
-    gap: 15px;
-    z-index: 200;
   }
 }
