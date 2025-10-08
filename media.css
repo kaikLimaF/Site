@@ -1,3 +1,17 @@
+/* --- MENU HAMBURGUER --- */
+.menu-toggle {
+  display: none; /* Escondido por padrão */
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #fff;
+  position: absolute;
+  right: 25px;
+  top: 18px;
+  z-index: 200;
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
   /* --- GERAL --- */
   body {
@@ -12,7 +26,7 @@
   }
 
   .menu-toggle {
-    display: block;
+    display: block; /* Mostra o botão em telas menores */
   }
 
   .video video{
