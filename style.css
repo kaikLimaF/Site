@@ -33,6 +33,11 @@ body {
 .cabecalho {
   background-color: rgb(78, 111, 126);
   /*RGB      claro(177, 203, 218)      normal rgb(78, 111, 126) */
+   background-image: url(Site/textura2.jpg);
+    /* Adicione aqui o link para uma imagem de textura sutil */
+    background-blend-mode: multiply;
+    /* Mistura a cor e a textura */
+    background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
