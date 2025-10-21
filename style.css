@@ -709,3 +709,16 @@ img {
     max-width: 98vw;
   }
 }
+
+.icone-orcamento {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.icone-orcamento img {
+  width: 4vh;
+  height: 4vh;
+  transition: transform 0.3s;
+}
